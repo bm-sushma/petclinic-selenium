@@ -34,7 +34,7 @@ public class PetClinic {
 		//driver.get(url);
 		
 		//driver.get(url);
-		//driver=new FirefoxDriver();
+		driver=new FirefoxDriver();
 		System.setProperty("webdriver.firefox.bin","/usr/bin/firefox"); 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
