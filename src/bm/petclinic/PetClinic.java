@@ -24,16 +24,24 @@ public class PetClinic {
 	@BeforeSuite
 
 	public void setup(){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		driver=new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		//driver=new ChromeDriver();
 		//driver=new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-		driver.get("http://54.214.95.28:8081/Petclinic/");
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		//driver.get("http://54.214.95.28:8081/Petclinic/");
 		//String url=driver.findElement(By.xpath("//body")).getText();
 		//driver.get(url);
 		
 		//driver.get(url);
+		driver=new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+		driver.get("http://54.69.137.122:8090/petclinic/");
+		String url=driver.findElement(By.xpath("//body")).getText();
+		driver.get(url);
+		
+		driver.get(url);
 		
 	}
 
